@@ -1,5 +1,5 @@
 console.log("juhi");
-//in compailar if const, let, var get it means it is assign im memory.
+//in compailar if const, let, var get it means it is assign in memory.
 
 const userEmail = "juhi@gmail.com"
 
