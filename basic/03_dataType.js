@@ -41,3 +41,26 @@ gameCounter++;//postfix 101
 ++gameCounter;//prefix  101
 
 console.log(gameCounter);//101
+
+
+//prefix increment(++x)
+//pahle value badhata h phir use karta h
+let x = 5;
+let y = ++x;//new value assigned
+console.log(x);//6
+console.log(y);//6
+
+//postfix increment (x++)
+//pahle value use karta h phir value padhata h
+let u = 5;
+let v = u++;//old value assigned
+console.log(u);//6
+console.log(v);//5
+
+let a = 1;
+//console.log(a++ + ++a);//1 + 3 = 4
+//console.log(a++);
+console.log(++a);
+
+//a++ use 1 then a =2
+//++a a = 3,use 3
