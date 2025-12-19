@@ -79,3 +79,9 @@ let strSomeNumber = String(someNumber)
 console.log(typeof strSomeNumber);
 console.log(strSomeNumber);
 
+let age = a14 //ReferenceError: a14 is not defined
+let val = Number(age);
+console.log(typeof val);
+console.log(val);
+
+
