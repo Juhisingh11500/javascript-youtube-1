@@ -59,4 +59,4 @@ const url = "juhi.com/juhi%20singh"
 //console.log(url.includes('kumari'));
 
 const fullName = "juhi-singh-kumari"
-console.log(fullName.split('-'));
+//console.log(fullName.split('-'));
