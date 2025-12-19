@@ -3,7 +3,7 @@
 /* data are two types
    on the basis of how to store data and acess data
    on the difference of call by value and call by refference
-1. primitive type datatypes
+1. primitive type datatypes// single value and immutable hote hain
    7 types
    string, number ,boolean , bigInt ,symbol ,null , undefined // call by value 
    when we call this type data not give the original refference, give the copy of the data
@@ -26,7 +26,7 @@
    const score:number = 100 //strictly type
 
 
-2. non primitive / reference type 
+2. non primitive / reference type // multiple values /structure rakhte hain aur mutable hote hain
    in the memory direct reference is allowcated
    Array , Object ,Functions */
 
@@ -48,3 +48,4 @@
    console.log(typeof myobj);//object
    console.log(typeof heros);//object
    
+// javascript has 7 primitive and 3 main referece  datatypes.
