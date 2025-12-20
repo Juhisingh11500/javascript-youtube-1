@@ -60,3 +60,31 @@ const url = "juhi.com/juhi%20singh"
 
 const fullName = "juhi-singh-kumari"
 //console.log(fullName.split('-'));
+
+console.log(fullName.concat(url));
+console.log(fullName.toString());
+
+let course = "javascript"
+let count = 0
+let vowels = "aeiou"
+
+for (const chr of course.toLowerCase()) {
+    //console.log(chr);
+    
+    if (vowels.includes(chr)) {
+       // console.log(vowels.includes(chr));
+        
+        count++
+    }
+}
+//console.log(count);
+
+let str = "hyps"
+let num = str.match(/[aeiou]/gi);//poora regular expresion hota h flags ke sath
+//let num2 = str.match([aeiou]);//this is only a character set
+//let num1 = str.match(/[aeiou]/gi).length;
+console.log(num);
+//console.log(num1);
+let num2 = num ? num.length : 0
+console.log(num2);
+
