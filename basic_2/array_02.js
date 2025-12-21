@@ -41,3 +41,11 @@ console.log(Array.of(scr1,scr2,scr3));//A set of elements to include in the new 
 //console.log(Array.from(scr1,scr2,scr3));//TypeError: number 200 is not a function
 console.log(Array.from(scr1));//[]
 console.log(Array.from(199));//[]
+
+
+let myaaray =[1,1,9,8,0,7,8,5,7]
+let unique = [...new Set(myaaray)];//duplicate numbers ko hatane ke liye
+
+console.log(myaaray);
+console.log(unique);//[ 1, 9, 8, 0, 7, 5 ]
+
