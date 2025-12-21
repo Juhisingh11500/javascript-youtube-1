@@ -28,7 +28,8 @@ let  realarr1 = anotherarr.flat(Infinity)//Returns a new array with all sub-arra
 
 Array.isArray("juhi")
 //console.log(Array.isArray("juhi"));//false
-//console.log(Array.from("juhi"));//Creates an array from an iterable object.
+//console.log(Array.from("juhi"));//array-like ko array me convert karta h
+//Creates an array from an iterable object.
 //[ 'j', 'u', 'h', 'i' ]
 
 //console.log(Array.from({name: "juhi"}))//[] verifyy that key or value converted into array other wise[array retuns]
@@ -36,11 +37,19 @@ Array.isArray("juhi")
 let scr1 = 100
 let scr2 = 200
 let scr3 = 300
-console.log(Array.of(scr1,scr2,scr3));//A set of elements to include in the new array object.
+console.log(Array.of(scr1,scr2,scr3));//[ 100, 200, 300 ]//given value se array banata h
+//A set of elements to include in the new array object.
 //Returns a new array from a set of elements.
 //console.log(Array.from(scr1,scr2,scr3));//TypeError: number 200 is not a function
 console.log(Array.from(scr1));//[]
 console.log(Array.from(199));//[]
+let fullName = "juhi"
+let firstn = "first"
+let lastname = "singh"
+//console.log(Array.from(fullName,firstn,lastname));//TypeError: string "first" is not a function
+console.log(Array.of(fullName,firstn,lastname));//[ 'juhi', 'first', 'singh' ]
+console.log(Array.from(fullName));//[ 'j', 'u', 'h', 'i' ]
+
 
 
 let myaaray =[1,1,9,8,0,7,8,5,7]
