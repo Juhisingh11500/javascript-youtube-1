@@ -54,10 +54,10 @@ let result2 = addnum(6,9)
 //memory creation phase
 val1 = undefined
 val2 = undefined
-addnum = {
-    let total = num1 + num2
-    return total
-}//definetion
+// addnum = {
+//     let total = num1 + num2
+//     return total
+// }//definetion
 result1 =undefined
 result2 =undefined
 
@@ -77,7 +77,7 @@ total = undefined
 //execution phase
 num1 = 2
 num2 = 32
-total = 2+32=34//retun in globel execution context
+// total = 2+32=34//retun in globel execution context
 
 addnum()
 //new variable enviromnt + execution thread
@@ -89,7 +89,7 @@ total = undefined
 //execution phase
 num1 = 6
 num2 = 9
-total = 6+9=15
+// total = 6+9=15
 //Function finish → context removed
 
 //call stack order
