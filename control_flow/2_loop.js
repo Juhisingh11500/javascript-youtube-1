@@ -1,5 +1,8 @@
 //for loop/itterators with break and continue
 
+//Jab number of iterations pehle se pata ho.
+//👉 initialization → condition check → code execute → increment
+
 for (let i = 0; i < 9; i++) {
     const element = i;
     //console.log(element);
