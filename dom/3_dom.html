@@ -1,0 +1,60 @@
+<!--how to create an element-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        body{
+            background-color: black;
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="headings">Create an element</h1>
+        <h2 class="headings">week days</h2>
+        <ul class = "parent">
+            <li class="item">sun</li>
+            <li class="item">mon</li>
+            <li class="item">tue</li>
+            <li class="item">wed</li>
+        </ul>
+        <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script>
+        let weekdays = document.querySelector(".parent")
+console.log(weekdays);
+console.log(weekdays.children);//HTMLCollection(4) [li.item, li.item, li.item, li.item]
+console.log(weekdays.children[2]);//<li class="item">tue</li>
+console.log(weekdays.children[1].innerHTML);//mon
+
+for (let i = 0; i < weekdays.children.length; i++) {
+    const element = weekdays.children[i];
+    //console.log(element);
+    //console.log(weekdays.children[i].innerHTML);
+}
+weekdays.children[2].style.color = "yellow"
+//console.log(weekdays.firstElementChild);
+//console.log(weekdays.lastElementChild);
+let dayone = document.querySelector('.item')
+// console.log(dayone);
+// console.log(dayone.parentElement);
+// console.log(dayone.nextElementSibling);
+
+//console.log("Nodes: ", weekdays.childNodes);//Nodes:  NodeList(9) [text, li.item, text, li.item, text, li.item, text, li.item, text]
+
+let div = document.createElement("div")
+console.log(div);
+//div.className = "main"
+//div.id = Math.round(Math.random() * 10 + 1)
+div.setAttribute("title", "generatedtitle")
+div.style.background = "grey"
+//div.innerText = "chai aur code"
+let addtext = document.createTextNode("chai aur code")
+div.appendChild(addtext)
+    </script>
+</body>
+</html>
