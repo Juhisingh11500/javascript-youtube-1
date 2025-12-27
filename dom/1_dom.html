@@ -1,0 +1,87 @@
+<!-- Dom introduction -->
+<!--It is a programming interface that allows JavaScript to access, manipulate, and control HTML and CSS.
+DOM is the object representation of an HTML document
+When a web page loads, the browser converts the HTML into a tree-like structure called the DOM.
+* Summary **
+DOM is a bridge between HTML and JavaScript
+It allows JavaScript to change web pages dynamically
+DOM is the core of front-end development-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+</head>
+<body>
+    <div class = container>
+        <h1 class = heading>Dom learning on chai aur code</h1>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+</body>
+</html>
+
+<!--console.log()
+Prints the value/output in a readable format
+Best for strings, numbers, arrays
+For DOM elements, it shows the HTML structure
+
+console.dir()
+Shows the object properties and methods
+Best for objects and DOM elements
+Displays data as a JavaScript object-->
+
+<!--DOM Tree Diagram-->
+window
+ |
+document
+└── html
+     ├── head
+     │   ├── title
+     │   │   └── "Dom learning"
+     │   └── meta
+     │
+     └── body
+         ├── div
+               ├── h1
+               │   └── "Hello"
+               └── p
+                   └── "Welcome"
+
+<!-- Important DOM Terms
+
+Term	    Meaning
+document	Entire web page
+element	    HTML tags (div, p, h1)
+node	    Every part of the DOM
+text node	Text inside an element
+attribute	id, class, src          -->
+
+<!--HTMLCollection********
+📌 What is it?
+A live collection of HTML elements.
+📌 Returned by
+getElementsByClassName()
+getElementsByTagName()
+children
+📌 Key Features
+✅ Live (auto-updates when DOM changes)
+❌ No array methods (map, filter, forEach)
+Access by index or name
+
+NodeList***************
+📌 What is it?
+A collection of nodes (elements, text, comments).
+📌 Returned by
+querySelectorAll() → static
+childNodes → live
+📌 Key Features
+🔄 Can be static or live
+✅ forEach() supported
+❌ No map, filter, reduce
+
+Convert to Array***************
+let arr1 = Array.from(htmlCollection);
+let arr2 = [...nodeList];-->
+
