@@ -1,0 +1,71 @@
+<!--edit and remove element-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code | Dom</title>
+</head>
+<body style="background-color: black;color: aquamarine;">
+      <div class="container">
+        <h1 class="headings">Create an element</h1>
+        <h2 class="headings">week days</h2>
+        <ul class = "parent">
+            <li class="item">sun</li>
+            <li class="item">mon</li>
+            <li class="item">tue</li>
+            <li class="item">wed</li>
+        </ul>
+        <p class="paragraph">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <script>
+//appendChild() ek hi node add karta hai aur return bhi karta hai
+//append() multiple nodes aur text add kar sakta hai, kuch return nahi karta
+//✅ Which one to use?
+//Old browser support chahiye → appendChild()
+//Modern & flexible code → append()
+
+//Insert at Specific Position
+//End me add
+//parent.append(p);
+
+//Start me add
+//parent.prepend(p);
+
+//Before / After
+//element.before(p);
+//element.after(p);
+
+function adddays(day) {
+   let li = document.createElement("li")
+   li.innerHTML = `${day}`
+   document.querySelector(".parent").appendChild(li)
+}
+adddays("thr")
+
+function optdays(day){
+  let li =  document.createElement("li")
+  li.appendChild(document.createTextNode(day))
+  document.querySelector(".parent").append(li)
+}
+optdays("fri")
+
+//edit
+let thirdday = document.querySelector("li:nth-child(3)")
+console.log(thirdday);
+//thirdday.innerHTML = "sun"
+let li = document.createElement("li")
+li.textContent ="sun"
+//li.appendChild(document.createTextNode("sun"))
+thirdday.replaceWith(li)
+
+//edit
+let firstday = document.querySelector("li:first-child")
+firstday.outerHTML ="<li> sat </li>"
+
+//remove
+let exitday = document.querySelector("li:last-child")
+exitday.remove()
+    </script>
+</body>
+</html>
