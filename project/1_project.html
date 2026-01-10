@@ -1,0 +1,90 @@
+<!--BGD color changer -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: darkgray;
+            text-align: center;
+        }
+        .boxes{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .box{
+            width: 7rem;
+            height: 7rem;
+            border: 1px solid #f3b0b0;
+        }
+        .box1{
+            background-color:purple ;
+        }
+           .box4{
+            background-color:green ;
+        }
+           .box2{
+            background-color:yellow ;
+        }
+           .box3{
+            background-color:red ;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Color scheme Switcher</h1>
+    <div class="boxes">
+        <div id="purple" class="box1 box"></div>
+        <div id="yellow" class="box2 box"></div>
+        <div id="red" class="box3 box"></div>
+        <div id="green" class="box4 box"></div>
+    </div>
+    <div class="para">Try clicking on one of the colors above to change  the background color of this page!</div>
+    <script>
+        let body = document.querySelector("body");
+        let btn = document.querySelectorAll(".box");
+        btn.forEach(function (button) {
+            button.addEventListener('click',function(e){
+            //    if (e.target.id === 'purple') {
+            //     body.style.backgroundColor = e.target.id
+            //    } 
+            //    if (e.target.id === 'yellow') {
+            //     body.style.backgroundColor = e.target.id
+            //    } 
+            //    if (e.target.id === 'red') {
+            //     body.style.backgroundColor = e.target.id
+            //    } 
+            //    if (e.target.id === 'green') {
+            //     body.style.backgroundColor = e.target.id
+            //    } 
+
+            // second method(sefty check)
+
+            // let color = e.target.id
+            // if (color) {
+            //     body.style.backgroundColor = color
+            // }
+
+            //third method
+
+            body.style.backgroundColor = e.target.id
+            })
+        })
+        
+       
+    </script>
+</body>
+
+</html>
