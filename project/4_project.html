@@ -71,6 +71,7 @@ console.log(typeof guess );
 if(guess <= 0 || guess > 100 || isNaN(guess)){
     p.innerText = "please give a valid number"
     startover.appendChild(p)
+    numguesses.value = ""
     return
 }
  validateguess(guess)
@@ -79,7 +80,7 @@ if(guess <= 0 || guess > 100 || isNaN(guess)){
 
 function validateguess(guess) {
      prevousarr.push(guess);
-     if (numguess === 11) {
+     if (numguess === 9) {
         displyguess(guess);
         displymsg(`Game over... Random number was ${radnum}`)
         endgame()
@@ -91,9 +92,11 @@ function validateguess(guess) {
 }
 function displyguess(guess) {
     numguesses.value = ""
-    prearr.innerHTML += `${guess}`
+    prearr.innerHTML += `${guess}  `
     numguess++;
-    countremain.innerHTML = `10 - ${numguess}`
+    countremain.innerHTML = 10 - numguess
+     p.innerText = ""
+
 }
 function checkguess(guess){
 if (guess === radnum) {
@@ -103,13 +106,29 @@ if (guess === radnum) {
 }
 }
 function displymsg(msg) {
-    
+    msg.innerHTML = `<h2>${msg}</h2>`
 }
 function endgame() {
-    
+    numguesses.value = ""
+    numguesses.setAttribute('disabled','')
+    p.classList.add('button')
+    p.innerHTML = `<h2 id ="newgame">start new game</h2>`
+    startover.appendChild(p)
+    playgame = false
+    newgame()
 }
 function newgame() {
-    
+    let newgame = document.querySelector('.button');
+    newgame.addEventListener('click',function(e){
+radnum = parseInt((Math.random()*100)+1);
+prevousarr = [];
+ numguess = 0;
+ countremain.innerHTML = 10 - numguess
+ prearr.innerHTML= ''
+ numguesses.removeAttribute('disable')
+ startover.removeChild(p)
+ playgame = true
+    })
 }
 
     </script>
