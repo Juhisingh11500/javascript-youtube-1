@@ -1,15 +1,37 @@
 <!-- guess the number -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project 4</title>
     <style>
+        body {
+            background-color: darkseagreen;
+            text-align: center;
+            color: rgb(157, 74, 44);
+        }
 
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .form input {
+            width: 25vh;
+            color: rgb(225, 71, 71);
+            font-weight: 600;
+        }
     </style>
- </head>
- <body>
+</head>
+
+<body>
     <div class="container">
         <h1>Number Guessing Game</h1>
         <p>Try and guess a random number between 1 to 100</p>
@@ -20,11 +42,77 @@
             <input type="submit" value="submit guess" id="subt">
         </form>
         <div class="results">
-            <p>Previous</p>
+            <p>Previous guesses <span class="gusses"></span></p>
+            <p>Guesses Remaining <span class="lastremaining">10</span></p>
+            <p class="loworhi"></p>
         </div>
     </div>
     <script>
+let btn = document.querySelector('#subt');
+let numguesses = document.querySelector('#guessfield');
+let msg = document.querySelector('.loworhi');
+let prearr = document.querySelector('.gusses');
+let countremain = document.querySelector('.lastremaining');
+let startover = document.querySelector('.results');
+
+let p = document.createElement('p');
+
+let radnum = parseInt((Math.random()*100)+1);
+let prevousarr = [];
+let numguess = 0;
+let playgame = true;
+
+if(playgame){
+   btn.addEventListener('click',function(e){
+e.preventDefault()
+let guess = parseInt(numguesses.value)
+console.log(typeof guess );
+
+if(guess <= 0 || guess > 100 || isNaN(guess)){
+    p.innerText = "please give a valid number"
+    startover.appendChild(p)
+    return
+}
+ validateguess(guess)
+   })
+}
+
+function validateguess(guess) {
+     prevousarr.push(guess);
+     if (numguess === 11) {
+        displyguess(guess);
+        displymsg(`Game over... Random number was ${radnum}`)
+        endgame()
+     }else{
+        displyguess(guess)
+        checkguess(guess)
+     }
+
+}
+function displyguess(guess) {
+    numguesses.value = ""
+    prearr.innerHTML += `${guess}`
+    numguess++;
+    countremain.innerHTML = `10 - ${numguess}`
+}
+function checkguess(guess){
+if (guess === radnum) {
+    displymsg(`congratulation....`)
+} else {
+    displymsg('please Guess Again')
+}
+}
+function displymsg(msg) {
+    
+}
+function endgame() {
+    
+}
+function newgame() {
+    
+}
 
     </script>
- </body>
- </html>
+</body>
+
+</html>
